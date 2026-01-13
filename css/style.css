@@ -11,6 +11,8 @@
 *	Edit this section
 *
 * ======================================================= */
+
+
 body {
   font-family: "Quicksand", Arial, sans-serif;
   font-weight: 400;
@@ -20,6 +22,7 @@ body {
   @media screen and (max-width: 992px) {
     body {
       font-size: 16px; } }
+
 
 a {
   color: #2c98f0;
@@ -1427,3 +1430,88 @@ body.offcanvas {
 
 .js .animate-box {
   opacity: 0; }
+
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    500deg,
+    #c5dbdf,
+    #e5e1ec,
+    #c5dbdf,
+    #e5e1ec,
+    #c5dbdf,
+    #e5e1ec,
+    #c5dbdf,
+    #e5e1ec
+  );
+  background-attachment: fixed;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* IMPORTANT: slides must be transparent */
+.slides li {
+  background: transparent;
+  color: #1f2937;
+  position: relative;
+}
+
+/* Optional soft overlay */
+.slides li .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+/* ===== Gradient visible everywhere (override template defaults) ===== */
+
+#colorlib-hero {
+  background: transparent !important;   /* removes white + loader bg */
+}
+
+#colorlib-main,
+#colorlib-page,
+.flexslider,
+.flexslider .slides,
+.flexslider .slides > li,
+.container-fluid,
+.row {
+  background: transparent !important;
+}
+
+/* Optional: make sidebar blend too (remove its grey background) */
+#colorlib-aside {
+  background: rgba(255,255,255,0.35) !important; /* or transparent */
+  backdrop-filter: blur(6px);
+}
+/* ===== Accordion hover & active color override ===== */
+
+.panel-heading a:hover,
+.panel-heading a:focus,
+.panel-heading a:active {
+  background: rgba(0, 0, 0, 0.08) !important; /* light grey */
+  color: #000 !important;
+}
+
+/* When accordion is open */
+.panel-heading a:not(.collapsed) {
+  background: rgba(0, 0, 0, 0.08) !important;
+  color: #000 !important;
+}
+/* ===== Resume download button hover override ===== */
+
+.btn-primary {
+  background-color: #e5e7eb !important;
+  border-color: #e5e7eb !important;
+  color: #000 !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: rgba(0, 0, 0, 0.08) !important; /* light grey */
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  color: #000 !important;
+  box-shadow: none !important;
+}
