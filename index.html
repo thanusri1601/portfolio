@@ -1,856 +1,703 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Thanusri Aenugula | Portfolio</title>
-  <meta name="viewport" content="width=1200">
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <meta name="author" content="" />
+  <meta name="description" content="Thanusri Aenugula — MS Data Science Student at Texas A&amp;M University." />
+  <meta name="author" content="Thanusri Aenugula" />
+  <meta name="theme-color" content="#faf8f5" />
 
   <!-- Facebook and Twitter integration -->
-  <meta property="og:title" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
-  <meta name="twitter:title" content="" />
-  <meta name="twitter:image" content="" />
-  <meta name="twitter:url" content="" />
-  <meta name="twitter:card" content="" />
+  <meta property="og:title" content="Thanusri Aenugula | Portfolio" />
+  <meta property="og:image" content="images/mee.png" />
+  <meta property="og:site_name" content="Thanusri Aenugula" />
+  <meta name="twitter:card" content="summary" />
 
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <link rel="shortcut icon" href="favicon.ico">
-  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-
-  <link href="/your-path-to-uicons/css/uicons-[your-style].css" rel="stylesheet"> <!-- load all styles -->
+  <link rel="icon" href="images/mee.png" type="image/png" sizes="256x256">
+  <link rel="apple-touch-icon" href="images/mee.png">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="css/animate.css">
-  <!-- Icomoon Icon Fonts -->
-  <link rel="stylesheet" href="css/icomoon.css">
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <!-- Flexslider -->
-  <link rel="stylesheet" href="css/flexslider.css">
-  <!-- Flaticons -->
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-  <script src="https://kit.fontawesome.com/b4e46ee3a4.js" crossorigin="anonymous"></script>
-
-  <!-- Owl Carousel -->
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- Modernizr JS -->
-  <script src="js/modernizr-2.6.2.min.js"></script>
-  <!-- FOR IE9 below -->
-  <!--[if lt IE 9]>
-  <script src="js/respond.min.js"></script>
-  <![endif]-->
-  <link rel="icon" style="mask-size:100%;" href="images/mee.png" type="image/png" sizes="256x256">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
-  <div id="colorlib-page">
-    <div class="container-wrap">
+  <!-- SVG icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.82-.26.82-.57v-2.04c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11zM3.5 6.5 12 13l8.5-6.5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5m5-5-5 5 5 5"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6m0-6-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 32 32"><path fill="currentColor" d="M9.3 25.6c-2.3 0-4-.8-5.1-2.3C3 21.8 2.5 20 2.5 17.8c0-3 .9-5.8 2.6-8.3 1.8-2.5 4.3-4.4 7.6-5.7l.9 1.7c-2.1 1-3.7 2.3-4.9 3.8-1.1 1.5-1.7 3-1.7 4.4 0 .6.1 1 .4 1.4.3.3.8.6 1.6.8 1.8.5 3 1.2 3.7 2.1.7.9 1.1 2 1.1 3.2 0 1.4-.5 2.5-1.5 3.3-.9.8-1.9 1.1-3 1.1zm15.6 0c-2.3 0-4-.8-5.1-2.3-1.2-1.5-1.7-3.3-1.7-5.5 0-3 .9-5.8 2.6-8.3 1.8-2.5 4.3-4.4 7.6-5.7l.9 1.7c-2.1 1-3.7 2.3-4.9 3.8-1.1 1.5-1.7 3-1.7 4.4 0 .6.1 1 .4 1.4.3.3.8.6 1.6.8 1.8.5 3 1.2 3.7 2.1.7.9 1.1 2 1.1 3.2 0 1.4-.5 2.5-1.5 3.3-.9.8-1.9 1.1-3 1.1z"/></symbol>
+  </svg>
 
-      <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar"
-        aria-expanded="false" aria-controls="navbar"><i></i></a>
+  <a class="skip-link" href="#about">Skip to content</a>
 
-      <!-- ===================== SIDEBAR ===================== -->
-      <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-        <div class="text-center">
-          <div class="author-img" style="background-image: url(images/mee.png);"></div>
-          <h1 id="colorlib-logo"><a href="index.html">Thanusri Aenugula</a></h1>
-          <span class="position" style="margin-bottom: 2px; display: block;">
-            <a href="#">MS Data Science Student</a> at Texas A&amp;M University
-          </span>
+  <!-- ===================== MOBILE TOP BAR ===================== -->
+  <header class="topbar">
+    <a class="topbar-brand" href="#home">
+      <span class="topbar-avatar" style="background-image: url(images/mee.png);" aria-hidden="true"></span>
+      <span>Thanusri Aenugula</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+  <div class="scrim" hidden></div>
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation">
+    <div class="sidebar-inner">
+      <div class="profile">
+        <div class="author-img" style="background-image: url(images/mee.png);" role="img" aria-label="Thanusri Aenugula"></div>
+        <h1 class="profile-name"><a href="#home">Thanusri Aenugula</a></h1>
+        <span class="profile-position">
+          <a href="#about">MS Data Science Student</a> at Texas A&amp;M University
+        </span>
+      </div>
+
+      <nav class="main-nav" role="navigation">
+        <ul>
+          <li><a href="#home" data-nav-section="home" class="active">Home</a></li>
+          <li><a href="#about" data-nav-section="about">About</a></li>
+          <li><a href="#portfolio" data-nav-section="portfolio">Portfolio</a></li>
+          <li><a href="#expertise" data-nav-section="expertise">Expertise</a></li>
+          <li><a href="#testimonials" data-nav-section="testimonials">Testimonials</a></li>
+          <li><a href="#experience" data-nav-section="experience">Experience</a></li>
+          <li><a href="#education" data-nav-section="education">Education</a></li>
+          <li><a href="#certifications" data-nav-section="certifications">Certifications</a></li>
+          <li><a href="#achievements" data-nav-section="achievements">Outside Work</a></li>
+          <li><a href="#contact" data-nav-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li>
+          <a href="https://www.linkedin.com/in/thanusria/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg><use href="#i-linkedin" /></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/thanusri1601" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg><use href="#i-github" /></svg>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:thanusri1601@gmail.com" aria-label="Email">
+            <svg><use href="#i-mail" /></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <main id="main" class="main">
+
+    <!-- ===================== HOME ===================== -->
+    <section id="home" class="hero" data-section="home">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-photo" style="background-image: url(images/mee.png);" role="img" aria-label="Thanusri Aenugula"></div>
+        <h1 class="hero-hello">Hi everyone,</h1>
+        <h1 class="hero-name">I'm Thanusri Aenugula</h1>
+        <p>
+          <a class="btn btn-primary" href="THANUSRI AENUGULA RESUME.pdf" target="_blank" download>
+            Download My Resume <svg class="btn-icon"><use href="#i-download" /></svg>
+          </a>
+        </p>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span></span></a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="section" data-section="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="heading-meta">About Me</span>
+          <h2 class="section-title">Who Am I?</h2>
+        </header>
+
+        <div class="about-text reveal">
+          <p class="lead">
+            Hi, I’m <span class="hl-name">Thanusri Aenugula</span> a <span class="hl">Data Science graduate student</span> at
+            <span class="hl">Texas A&amp;M</span> with a background in <span class="hl">Electrical Engineering</span> and a
+            curiosity for how data and AI can solve real-world problems.
+          </p>
+          <p class="about-body">
+            From recommendation systems and predictive analytics to AI-driven solutions, I enjoy taking a
+            problem apart, asking better questions, and building something useful from it.
+          </p>
+          <p class="about-note">
+            I’m still on the learning curve - and that’s the part I enjoy most.
+          </p>
         </div>
 
-        <nav id="colorlib-main-menu" role="navigation" class="navbar">
-          <div id="navbar" class="collapse">
-            <ul>
-              <li class="active"><a href="#" data-nav-section="home">Home</a></li>
-              <li><a href="#" data-nav-section="about">About</a></li>
-              <li><a href="#" data-nav-section="portfolio">Portfolio</a></li>
-              <li><a href="#" data-nav-section="expertise">Expertise</a></li>
-              <li><a href="#" data-nav-section="testimonials">Testimonials</a></li>
-              <li><a href="#" data-nav-section="experience">Experience</a></li>
-              <li><a href="#" data-nav-section="education">Education</a></li>
-              <li><a href="#" data-nav-section="certifications">Certifications</a></li>
-              <li><a href="#" data-nav-section="achievements">Outside Work</a></li>
-              <li><a href="#" data-nav-section="contact">Contact</a></li>
-            </ul>
+        <div class="logo-strip reveal">
+          <div class="logo-strip-scroll">
+            <img src="images/combo.png" alt="AMETEK, H-E-B, Texas A&amp;M University, The University of Texas at Austin, Daimler, DRDO and SSN logos" loading="lazy">
           </div>
-        </nav>
-
-        <div class="social_icon">
-          <ul style="list-style-type: none">
-            <li style="display: inline; padding-left: 60px;">
-              <a style="color: rgb(52, 48, 48);" href="https://www.linkedin.com/in/thanusria/" target="_blank">
-                <i class="fa-brands fa-linkedin fa-xl"></i>
-              </a>
-            </li>
-            <li style="display: inline; padding-left: 15px">
-              <a style="color: rgb(52, 48, 48);" href="https://github.com/thanusri1601" target="_blank">
-                <i class="fa-brands fa-github fa-xl"></i>
-              </a>
-            </li>
-            <li style="display: inline; padding-left: 15px">
-              <a style="color: rgb(52, 48, 48);" href="mailto:thanusri1601@gmail.com" target="_blank">
-                <i class="fa-solid fa-envelope fa-xl"></i>
-              </a>
-            </li>
-          </ul>
         </div>
-      </aside>
+      </div>
+    </section>
 
-      <div id="colorlib-main">
+    <!-- ===================== PORTFOLIO ===================== -->
+    <section id="portfolio" class="section section-tint" data-section="portfolio">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="heading-meta">My Work</span>
+          <h2 class="section-title">HOW DO I TURN IDEAS INTO RESULTS?</h2>
+        </header>
 
-        <!-- ===================== HOME ===================== -->
-        <section id="colorlib-hero" class="js-fullheight" data-section="home">
-          <div class="flexslider js-fullheight">
-            <ul class="slides">
+        <div class="project-grid">
+          <!-- Machine Learning -->
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="images/ml-card.png" alt="Machine Learning" loading="lazy">
+            </div>
+            <div class="project-overlay">
+              <h3>Machine Learning Projects</h3>
+              <a class="btn btn-light" href="https://rich-painter-24c.notion.site/My-Work-24ee5e0e682580479bd2e2587f2d3e0d"
+                target="_blank" rel="noopener">Checkout <svg class="btn-icon"><use href="#i-arrow" /></svg></a>
+            </div>
+          </article>
+
+          <!-- Analytics and Dashboarding -->
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="images/analytics-card.png" alt="Analytics and Dashboarding" loading="lazy">
+            </div>
+            <div class="project-overlay">
+              <h3>Analytics and Dashboarding Projects</h3>
+              <a class="btn btn-light" href="https://rich-painter-24c.notion.site/My-Work-24ee5e0e6825804e9b84d39eb7b07bd5?source=copy_link"
+                target="_blank" rel="noopener">Checkout <svg class="btn-icon"><use href="#i-arrow" /></svg></a>
+            </div>
+          </article>
+
+          <!-- Generative AI -->
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="images/g-card.png" alt="Generative AI" loading="lazy">
+            </div>
+            <div class="project-overlay">
+              <h3>Generative AI Projects</h3>
+              <a class="btn btn-light" href="https://rich-painter-24c.notion.site/My-Work-2e6e5e0e68258089a618c3fa8f4c2165?source=copy_link"
+                target="_blank" rel="noopener">Checkout <svg class="btn-icon"><use href="#i-arrow" /></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERTISE ===================== -->
+    <section id="expertise" class="section" data-section="expertise">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="heading-meta">MY EXPERTISE</span>
+          <h2 class="section-title">WHAT I DO?</h2>
+        </header>
+
+        <div class="skills">
+          <article class="skill-card accent-1 reveal">
+            <h3>Generative AI &amp; Data Science Skillset</h3>
+            <ul class="chips">
+              <li>Large Language Models</li>
+              <li>Agentic AI Systems</li>
+              <li>Prompt Engineering</li>
+              <li>Retrieval-Augmented Generation</li>
+              <li>Fine-tuning &amp; Model Optimization</li>
+              <li>LLM Evals</li>
+            </ul>
+            <ul class="chips">
+              <li>Machine Learning</li>
+              <li>Deep Learning</li>
+              <li>NLP</li>
+              <li>Data Preprocessing &amp; Feature Engineering</li>
+              <li>Statistical Analysis</li>
+              <li>Experimentation &amp; Evaluation Metrics</li>
+              <li>Model Deployment</li>
+            </ul>
+          </article>
+
+          <article class="skill-card accent-2 reveal">
+            <h3>Data Analytics and Dashboarding</h3>
+            <ul class="chips">
+              <li>SQL</li>
+              <li>Tableau</li>
+              <li>Power BI</li>
+              <li>Microsoft Excel</li>
+              <li>Data Visualization</li>
+              <li>A/B Testing</li>
+              <li>Hypothesis Testing</li>
+              <li>SPSS</li>
+            </ul>
+            <ul class="chips">
+              <li>Data Manipulation</li>
+              <li>Python Data Visualization Libraries : NumPy, Pandas, Matplotlib, SeaBorn</li>
+            </ul>
+          </article>
+
+          <article class="skill-card accent-3 reveal">
+            <h3>Interpersonal Skills</h3>
+            <ul class="chips">
+              <li>Effective Communication</li>
+              <li>Stakeholder Management</li>
+              <li>Collaboration</li>
+              <li>Problem-solving</li>
+              <li>Design Thinking</li>
+              <li>Resilience</li>
+            </ul>
+            <ul class="chips">
+              <li>Time and Task Management</li>
+              <li>Presentation Skills</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section id="testimonials" class="section section-tint" data-section="testimonials">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="heading-meta">TESTIMONIALS</span>
+          <h2 class="section-title">What’s it like to work with me?</h2>
+        </header>
+
+        <div class="testimonials">
+          <!-- Director's Appreciation -->
+          <figure class="quote-card quote-image reveal">
+            <img src="images/bilj.png" alt="Appreciation from Director" loading="lazy">
+            <figcaption class="quote-author">
+              <strong>Biljana Jovanova</strong>
+              <span>Director of Data Science, H-E-B</span>
+            </figcaption>
+          </figure>
+
+          <!-- H-E-B Mentor -->
+          <figure class="quote-card reveal">
+            <svg class="quote-mark" aria-hidden="true"><use href="#i-quote" /></svg>
+            <blockquote>
+              <p>
+                I had the pleasure of being Thanusri’s mentor for her 2026 Data Science internship at H-E-B.
+
+                During her internship, Thanusri took ownership of her project in a manner exceeding that of most
+                of her peers. In the initial weeks she engrossed herself in H-E-B’s culture and participated in
+                deep research to understand the domain she was supporting.
+
+                Once she established herself in the project background, she took the reins to be the development
+                lead. One thing that impressed me was Thanusri’s ability to absorb information and feedback and
+                incorporate that into her project while still maintaining a strict adherence to the deadlines.
+
+                Beyond her technical adeptness, Thanusri invested time to meet with Partners across H-E-B
+                (covering a vast array of domains) to establish personal connections and learn how her project
+                fits into the larger picture. As a result of interest around her project, she was invited to an
+                all-hands meeting by a sister team to present her work. Her final presentation to the entire H-E-B
+                internship cohort (and their peers) was among the most comprehensive, clear, and exciting.
+
+                Thanusri excels in the technical and soft skills that would make her a valuable asset to any
+                team.
+              </p>
+            </blockquote>
+            <figcaption class="quote-author">
+              <strong>Campbell Saint Vincent</strong>
+              <span>Data Scientist II, H-E-B</span>
+            </figcaption>
+          </figure>
+
+          <!-- Texas A&M Lab -->
+          <figure class="quote-card reveal">
+            <svg class="quote-mark" aria-hidden="true"><use href="#i-quote" /></svg>
+            <blockquote>
+              <p>
+                I had the opportunity to work with Thanusri in the same group at the Advanced Vision &amp;
+                Learning Lab at Texas A&amp;M University. During that time, I found her to be punctual,
+                hardworking, and respectful in the group environment. She showed a positive attitude toward her
+                work and was willing to contribute to assigned tasks. Thanusri is also a kind and professional
+                person to work with, and I believe these qualities will support her in future academic and
+                professional opportunities.
+              </p>
+            </blockquote>
+            <figcaption class="quote-author">
+              <strong>Fahimeh Orvati Nia</strong>
+              <span>Doctor of Philosophy, Computer Engineering, Texas A&amp;M University</span>
+            </figcaption>
+          </figure>
+
+          <!-- Daimler Truck - Manager -->
+          <figure class="quote-card reveal">
+            <svg class="quote-mark" aria-hidden="true"><use href="#i-quote" /></svg>
+            <blockquote>
+              <p>
+                Thanusri, Highly Aspiring, Commitment Oriented, Keep Improving Attitude &amp; Kindful.
+
+                Displayed her patience and persistence in preparing the base table by constantly working with test
+                engineers. Her efforts to understand more and improving the sanity level constantly is much
+                appreciated.
+
+                Although coming from non automotive background, she rapidly learnt the basics and correlated in
+                the ML model. When questions arose, she didn’t just accept the status quo—she asked probing,
+                thoughtful questions, seeking clarity from first principles. Inquiry to the core.
+
+                Very sincere in completing the model well ahead of timeline.
+                Throughout review cycles, she responded to feedback promptly and diligently, demonstrating a
+                strong sense of ownership and commitment to quality.
+
+                Her communication skills are excellent, explaining complex concepts in simple understandable
+                manner.
+                She is kind, grounded and approachable.
+
+                Privilege working with Thanusri. I am confident she will continue to excel.
+              </p>
+            </blockquote>
+            <figcaption class="quote-author">
+              <strong>Hari Krishnan</strong>
+              <span>Manager, Daimler Truck</span>
+            </figcaption>
+          </figure>
+
+          <!-- Daimler Truck - Team Lead -->
+          <figure class="quote-card reveal">
+            <svg class="quote-mark" aria-hidden="true"><use href="#i-quote" /></svg>
+            <blockquote>
+              <p>
+                Thanusri is an ardent learner, with a great attitude and wide perspective. During her internship
+                at Daimler Truck, she not only exhibited her proficiency in her core domain, but also cross learnt
+                vehicle systems and connected the dots efficiently. It was pleasure to work with her!
+              </p>
+            </blockquote>
+            <figcaption class="quote-author">
+              <strong>Dhik Vijay</strong>
+              <span>Team Lead, Daimler Truck</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section id="experience" class="section" data-section="experience">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="heading-meta">Work Experience</span>
+          <h2 class="section-title">How have I made an impact?</h2>
+        </header>
+
+        <ol class="timeline">
+          <!-- AMETEK -->
+          <li class="timeline-entry reveal">
+            <div class="timeline-logo"><img src="images/AMETEK.png" alt="AMETEK logo" loading="lazy"></div>
+            <div class="timeline-card">
+              <header class="timeline-head">
+                <h3>AMETEK - Amot Controls</h3>
+                <p class="timeline-role">AI &amp; Analytics Associate</p>
+                <span class="timeline-date">Aug 2026 - Present</span>
+              </header>
+              <ul>
+                <li>Designed a RAG feature on Microsoft Copilot Studio within 4 weeks using product manuals, datasheets, and internal emails, enabling customer service representatives to quickly access support information, improving response consistency and reducing manual search effort.</li>
+                <li>Built an evaluation and observability layer combining LLM-as-a-Judge scoring, a golden dataset of 500+ QA pairs, human-in-the loop review, and LangSmith tracing across runs, achieving ~85% answer accuracy on queries and reducing debugging time.</li>
+                <li>Built an end-to-end intelligent document processing (IDP) and workflow automation pipeline in Power Automate, using Azure AI Content Understanding and Azure AI Document Intelligence to extract structured order data from customer purchase orders with varying layouts.</li>
+                <li>Integrated the pipeline with the IFS Cloud ERP REST API, adding validation checks on extracted order fields before automatically creating order confirmations, reducing manual data entry for the order processing team.</li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- H-E-B -->
+          <li class="timeline-entry reveal">
+            <div class="timeline-logo"><img src="images/download.png" alt="H-E-B logo" loading="lazy"></div>
+            <div class="timeline-card">
+              <header class="timeline-head">
+                <h3>H-E-B</h3>
+                <p class="timeline-role">Decision Science Analyst Intern</p>
+                <span class="timeline-date">May 2026 - Aug 2026</span>
+              </header>
+              <ul>
+                <li>Designed a Next-Basket Recommendation system using 11M+ grocery transactions across 15K+ products to predict which items each household will buy on their next shopping trip, improving on frequency-based recommendations by adding purchase timing.</li>
+                <li>Built an end-to-end recommendation pipeline that filtered each household’s purchase history to relevant products and engineered 55 temporal, behavioral, and basket-level features, such as days since last purchase, typical repurchase cycle, and overdue items.</li>
+                <li>Trained a LightGBM LambdaRank learning-to-rank model, tuned with Optuna hyperparameter optimization, to prioritize easily forgotten items, achieving 74% Recall@10 by capturing three-quarters of items customers actually purchased within the top 10 recommendations.</li>
+                <li>Presented the recommendation framework and key findings to Data Science leadership, demonstrating a scalable methodology to improve basket completeness, customer loyalty, and shopping experience.</li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Texas A&M Lab -->
+          <li class="timeline-entry reveal">
+            <div class="timeline-logo"><img src="images/TAM-White-2.png" alt="Texas A&amp;M logo" loading="lazy"></div>
+            <div class="timeline-card">
+              <header class="timeline-head">
+                <h3>Texas A&amp;M University, Advanced Vision and Learning Lab</h3>
+                <p class="timeline-role">Graduate Student Technician</p>
+                <span class="timeline-date">Jan 2026 - May 2026</span>
+              </header>
+              <ul>
+                <li>Contributed to research at Texas A&amp;M University’s Advanced Vision and Learning Lab (AVLL), working under Dr. Joshua Peeples on an automated plant phenotyping project to develop image-processing workflows that quantify plant growth and morphology from segmented images.</li>
+                <li>Supported researchers in computer vision based plant growth analysis, transforming segmented plant images into quantitative growth measurements using OpenCV, image processing, and skeletonization to analyze complex plant structures.</li>
+                <li>Extracted 5+ plant traits, including leaf area, width, path length, and structural measurements, and collaborated with AgriLife researchers to turn growth and morphology analyses into insights for experimental planning and research decisions.</li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Daimler -->
+          <li class="timeline-entry reveal">
+            <div class="timeline-logo"><img src="images/download mercedes.jpeg" alt="Daimler Logo" loading="lazy"></div>
+            <div class="timeline-card">
+              <header class="timeline-head">
+                <h3>Daimler India Commercial Vehicles (BharatBenz)</h3>
+                <p class="timeline-role">Data Science Intern</p>
+                <span class="timeline-date">Jan 2025 - Jun 2025</span>
+              </header>
+              <ul>
+                <li>Collaborated with the Data-Driven Engineering team to develop machine learning solutions into vehicle testing pipelines, streamlining 6 dynamic brake testing workflows across 44 truck variants.</li>
+                <li>Developed a statistical twin for Dynamic Brake Testing, predicting braking deceleration (MFDD) with Random Forest Regressor (R² 0.94) and stopping distance with XGBoost Regressor (R² 0.937), tuned using GridSearchCV.</li>
+                <li>Built and delivered a Streamlit application for the Functional Brake Testing team that predicts whether a vehicle will pass or fail regulatory brake tests, enabling pre-screening before physical testing and reducing testing time by 80%.</li>
+                <li>Built ETL pipelines in Azure Databricks using PySpark and SQL to extract telematics and Dealer Management System data from Azure cloud storage, transform it for analysis, and built Power BI dashboards for vehicle monitoring, driving pattern analysis, and fleet optimization.</li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Shrimitha Energy -->
+          <li class="timeline-entry reveal">
+            <div class="timeline-logo"><img src="images/shri logo.png" alt="Shrimitha logo" loading="lazy"></div>
+            <div class="timeline-card">
+              <header class="timeline-head">
+                <h3>Shrimitha Energy Solutions Pvt Limited</h3>
+                <p class="timeline-role">Data Science Intern</p>
+                <span class="timeline-date">Sept 2024 - Nov 2024</span>
+              </header>
+              <ul>
+                <li>Formulated hybrid deep learning models CNN-LSTM-XGBoost to predict lithium-ion battery Remaining Useful Life and State of Charge, achieving an R² of 0.97 and enabling high-accuracy predictive maintenance.</li>
+                <li>Processed degradation feature-extraction for performance data from 38+ lithium-ion batteries, supporting early fault detection and reducing fault-identification time for maintenance scheduling.</li>
+                <li>Established end-to-end battery health monitoring pipelines integrating predictive RUL models with operational systems, reducing unplanned equipment downtime and improving maintenance planning accuracy.</li>
+                <li>Produced interactive Power BI dashboards visualizing real-time battery degradation trends, capacity fade curves, and health KPIs, enabling data-driven maintenance decisions for field operations.</li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- DRDO -->
+          <li class="timeline-entry reveal">
+            <div class="timeline-logo"><img src="images/drdologo1.png" alt="DRDO Logo" loading="lazy"></div>
+            <div class="timeline-card">
+              <header class="timeline-head">
+                <h3>Defense Research Development Organisation</h3>
+                <p class="timeline-role">Data Science Intern</p>
+                <span class="timeline-date">Jul 2023 - Aug 2023</span>
+              </header>
+              <ul>
+                <li>Conducted in-depth literature survey and technical analysis on Hybrid Electric Vehicle Technologies to identify innovation trends and performance metrics.</li>
+                <li>Applied data collection, preprocessing, and analytical techniques to synthesize insights from diverse engineering and research sources.</li>
+                <li>Collaborated with a multidisciplinary team under Defence Research &amp; Development Organisation (DRDO) to align research outcomes with industry and government objectives.</li>
+                <li>Presented the literature survey to Scientist 'F' - Selvathaai at the Combat Vehicles Research and Development Establishment (CVRDE) on the Hybrid Electric Vehicle Technologies.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section id="education" class="section section-tint" data-section="education">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="heading-meta">Education</span>
+          <h2 class="section-title">where am i building my foundation?</h2>
+        </header>
+
+        <div class="accordion reveal">
+          <!-- Master's -->
+          <details class="acc-item" name="education" open>
+            <summary>
+              <span class="acc-title">Master of Science in Data Science <span class="acc-date">(Aug 2025 - May 2027)</span></span>
+              <span class="acc-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="acc-body">
+              <p>
+                I am currently pursuing <strong>a Master of Science in Data Science (MSDS) at Texas A&amp;M
+                  University, College Station, Texas, USA.</strong> My graduate studies have strengthened my
+                foundation in machine learning, artificial intelligence, statistical modeling, and
+                large-scale data analytics while providing opportunities to apply these concepts to
+                real-world business problems.
+              </p>
+              <p>
+                <strong>Courses:</strong> Mathematical Foundations for Data Science, Statistical Foundations
+                for Data Science, Data Mining and Analysis, Databases and Computational Tools Used in Big
+                Data, Applied Analytics, Parallel Computing, Machine Learning Engineering
+              </p>
+              <ul>
+                <li><b>GPA : </b>3.85/4</li>
+                <li>I worked as a Graduate Student Technician in the Advanced Vision and Learning Lab, contributing to a research project on Multimodal, Multitask Data Analysis for Automated Plant Phenotyping</li>
+                <li>I worked as a Decision Science Analyst at H-E-B this summer within the Data Science Center of Excellence (DSCOE) on an end-to-end Next-Basket Recommendation System to predict customer's next purchases.</li>
+                <li>I am currently working as a AI &amp; Analytics Associate at AMETEK - Amot Controls for this fall where I am working on AI-driven workflow automation and data analytics initiatives, collaborating with teams to build data and AI solutions.</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Bachelor's -->
+          <details class="acc-item" name="education">
+            <summary>
+              <span class="acc-title">Bachelors in Electrical and Electronics Engineering <span class="acc-date">(Aug 2021 - May 2025)</span></span>
+              <span class="acc-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="acc-body">
+              <p>
+                I have completed my <strong>Bachelor of Engineering in Electrical and Electronics Engineering
+                  from Sri Sivasubramaniya Nadar College Engineering, Chennai, India.</strong> During my
+                undergrad, I participated in cultural fests, hackathons, and clubs to explore my interests. I
+                also worked on multiple projects and undertook internships to widen my technical skillset.
+                Undergrad was a challenging yet exciting phase of my life and taught me to be independent and
+                self-sufficient!
+              </p>
+              <p>
+                <strong>Courses: </strong>Data Structures, Probability and Statistics, Introduction to Data
+                Science, Machine Learning, Artificial Intelligence
+              </p>
+              <ul>
+                <li><b>GPA : </b>8.72/10</li>
+                <li>Actively contributed to the DATABUZZ community by engaging in advanced workshops and collaborations, expanding expertise in data analytics and project management.</li>
+                <li>Coordinated alumni engagement for a 600+ attendee tribute event, strengthening the SSN network and elevating event execution standards through strategic planning and relationship-building.</li>
+                <li>I volunteered and managed technical events at INVENTE a technical fest of SSN.</li>
+                <li>I was a part of the Build Club of India, SSN. Engineered innovative turns ideas into real-world prototypes through hands-on hardware and IoT projects.</li>
+                <li>I Secured first position in the regional-level singing competition and represented at the national-level.</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- UT Austin -->
+          <details class="acc-item" name="education">
+            <summary>
+              <span class="acc-title">Post Graduate Program in Data Science &amp; Business Analytics – Professional Certification <span class="acc-date">(Aug 2023 - Aug 2024)</span></span>
+              <span class="acc-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="acc-body">
+              <p>
+                I have completed the <strong>PG Program in Data Science and Business Analytics</strong> from the
+                <strong>University of Texas at Austin</strong>.
+                The program focused on advanced data analytics, business strategy, and hands-on projects using
+                industry datasets.
+              </p>
+              <p>
+                <strong>Courses:</strong> SQL, Predictive Modeling, Data Visualization, Time Series Forecasting,
+                Marketing and Retail Analytics, Financial and Risk Analytics.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATIONS ===================== -->
+    <section id="certifications" class="section" data-section="certifications">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="heading-meta">Certifications</span>
+          <h2 class="section-title">Achievements &amp; Certifications</h2>
+        </header>
+
+        <div class="cert-slider reveal" aria-roledescription="carousel" aria-label="Certificates">
+          <div class="cert-frame">
+            <div class="cert-track">
+              <img class="cert-slide is-active" src="images/THANUSRI.jpg" alt="Certificate 1">
+              <img class="cert-slide" src="images/THANUSRI2.jpg" alt="Certificate 2" loading="lazy">
+              <img class="cert-slide" src="images/4247893-AI_-_The_Ultimate_Program_for_Data_Engineers-Thanusri_Aenugula_page-0001.jpg" alt="Certificate 3" loading="lazy">
+              <img class="cert-slide" src="images/4252696-AI_-_The_Ultimate_Program_for_Data_Engineers-Thanusri_Aenugula_page-0001.jpg" alt="Certificate 4" loading="lazy">
+              <img class="cert-slide" src="images/linkedin_image.jpg" alt="Certificate 5" loading="lazy">
+            </div>
+          </div>
+          <div class="cert-controls">
+            <button class="icon-btn cert-prev" type="button" aria-label="Previous certificate">
+              <svg><use href="#i-arrow-left" /></svg>
+            </button>
+            <div class="cert-dots" role="tablist"></div>
+            <button class="btn btn-primary cert-next" type="button">Next ➡</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== OUTSIDE WORK ===================== -->
+    <section id="achievements" class="section section-tint" data-section="achievements">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="heading-meta">Passion beyond the desk</span>
+          <h2 class="section-title">What Keeps Me Energized?</h2>
+        </header>
+
+        <div class="collage reveal">
+          <img src="images/photo-collage.png.png" alt="Photo collage of activities beyond work" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="section" data-section="contact">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="heading-meta">Get in Touch</span>
+          <h2 class="section-title">Let’s start a conversation!!</h2>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <a class="contact-item" href="mailto:thanusri1601@gmail.com">
+              <span class="contact-icon"><svg><use href="#i-mail" /></svg></span>
+              <span>thanusri1601@gmail.com</span>
+            </a>
+            <div class="contact-item">
+              <span class="contact-icon"><svg><use href="#i-pin" /></svg></span>
+              <span>College Station, TX</span>
+            </div>
+            <ul class="social social-inline">
               <li>
-                <div class="overlay"></div>
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-                      <div class="slider-text-inner js-fullheight">
-                        <div class="desc text-center">
-                          <h1 style="color:black; width: 20cm;">Hi everyone,</h1>
-                          <h1 style="color:black; width: 20cm;">I'm Thanusri Aenugula</h1>
-                          <p>
-                            <a style="background-color:#e5e7eb; border-color:#e5e7eb; color:black;"
-                              class="btn btn-primary" href="THANUSRI AENUGULA RESUME.pdf" target="_blank" download>
-                              Download My Resume <i class="icon-download4"></i>
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <a href="https://www.linkedin.com/in/thanusria/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                  <svg><use href="#i-linkedin" /></svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/thanusri1601" target="_blank" rel="noopener" aria-label="GitHub">
+                  <svg><use href="#i-github" /></svg>
+                </a>
               </li>
             </ul>
           </div>
-        </section>
 
-        <!-- ===================== ABOUT ===================== -->
-        <section class="colorlib-about" data-section="about">
-          <div class="colorlib-narrow-content">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                  <div class="col-md-12">
-                    <div class="about-desc">
-                      <span class="heading-meta">About Me</span>
-                      <h2 class="colorlib-heading">Who Am I?</h2>
-                      <p style="font-size: medium; text-align: justify;">
-                        Hi, I’m Thanusri Aenugula a Data Science graduate student at Texas A&amp;M with a background in
-                        Electrical Engineering and a curiosity for how data and AI can solve real-world problems.
+          <form class="contact-form reveal" action="https://formsubmit.co/thanusri1601@gmail.com" method="POST"
+            data-ajax="https://formsubmit.co/ajax/thanusri1601@gmail.com" novalidate>
+            <!-- FormSubmit settings -->
+            <input type="hidden" name="_subject" value="New message from your portfolio website">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-                        From recommendation systems and predictive analytics to AI-driven solutions, I enjoy taking a
-                        problem apart, asking better questions, and building something useful from it.
-
-                        I’m still on the learning curve - and that’s the part I enjoy most.
-                      </p>
-                    </div>
-                    <div class="about-desc">
-                      <img style="width: 100%;" src="images/combo.png" alt="Cinque Terre">
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="form-row">
+              <label class="sr-only" for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" class="form-control" placeholder="Name" autocomplete="name" required>
+              <label class="sr-only" for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" class="form-control" placeholder="Email" autocomplete="email" required>
             </div>
-          </div>
-        </section>
-
-        <!-- ===================== PORTFOLIO ===================== -->
-        <section class="colorlib-work" data-section="portfolio">
-          <div class="colorlib-narrow-content">
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                <span class="heading-meta">My Work</span>
-                <h2 class="colorlib-heading animate-box" style="white-space: nowrap;">HOW DO I TURN IDEAS INTO RESULTS?</h2>
-              </div>
+            <label class="sr-only" for="message">Message</label>
+            <textarea name="message" id="message" rows="6" class="form-control" placeholder="Message" required></textarea>
+            <div class="form-footer">
+              <button type="submit" class="btn btn-primary btn-send-message">Send Message <svg class="btn-icon"><use href="#i-arrow" /></svg></button>
+              <p class="form-status" role="status" aria-live="polite" hidden></p>
             </div>
+          </form>
+        </div>
+      </div>
+    </section>
 
-            <div class="row">
-              <!-- Machine Learning -->
-              <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                <div class="project" style="background-image: url(images/ml.png);">
-                  <div class="desc">
-                    <div class="con">
-                      <h3 style="text-align: center; padding-top: 10ch;">
-                        <a>Machine Learning Projects</a> <br> <br><br>
-                        <a style="border: 2px solid white;"
-                          href="https://rich-painter-24c.notion.site/My-Work-24ee5e0e682580479bd2e2587f2d3e0d"
-                          target="_blank" class="btn btn-dark" role="button" aria-pressed="Checkout">Checkout</a>
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
+  </main>
 
-              <!-- Analytics and Dashboarding -->
-              <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                <div class="project" style="background-image: url(images/analytics.png);">
-                  <div class="desc">
-                    <div class="con">
-                      <h3 style="text-align: center; padding-top: 10ch;">
-                        <a>Analytics and Dashboarding Projects</a> <br> <br><br>
-                        <a style="border: 2px solid white;"
-                          href="https://rich-painter-24c.notion.site/My-Work-24ee5e0e6825804e9b84d39eb7b07bd5?source=copy_link"
-                          target="_blank" class="btn btn-dark" role="button" aria-pressed="Checkout">Checkout</a>
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Generative AI -->
-              <div class="col-md-6 col-md-offset-3 animate-box" data-animate-effect="fadeInUp">
-                <div class="project" style="background-image: url(images/g.png);">
-                  <div class="desc">
-                    <div class="con">
-                      <h3 style="text-align: center; padding-top: 10ch;">
-                        <a>Generative AI Projects</a> <br><br><br>
-                        <a style="border: 2px solid white;"
-                          href="https://rich-painter-24c.notion.site/My-Work-2e6e5e0e68258089a618c3fa8f4c2165?source=copy_link"
-                          target="_blank" class="btn btn-dark" role="button">Checkout</a>
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ===================== EXPERTISE ===================== -->
-        <section class="colorlib-services" data-section="expertise">
-          <div class="colorlib-narrow-content">
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                <span class="heading-meta">MY EXPERTISE</span>
-                <h2 class="colorlib-heading">WHAT I DO?</h2>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-                <div class="services color-1" style="height: 170px;">
-                  <h3><b>Generative AI &amp; Data Science Skillset</b></h3>
-                  <h3 style="font-size: small; text-align: center;">
-                    Large Language Models | Agentic AI Systems | Prompt Engineering | Retrieval-Augmented Generation |
-                    Fine-tuning &amp; Model Optimization | LLM Evals
-                    <br><br>
-                    Machine Learning | Deep Learning | NLP | Data Preprocessing &amp; Feature Engineering |
-                    Statistical Analysis | Experimentation &amp; Evaluation Metrics | Model Deployment
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-                <div class="services color-2" style="height: 130px;">
-                  <h3><b>Data Analytics and Dashboarding</b></h3>
-                  <h3 style="font-size: small; text-align: center;">
-                    SQL | Tableau | Power BI | Microsoft Excel | Data Visualization | A/B Testing | Hypothesis Testing |
-                    SPSS
-                    <br><br>
-                    Data Manipulation | Python Data Visualization Libraries : NumPy, Pandas, Matplotlib, SeaBorn
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-                <div class="services color-3" style="height: 130px;">
-                  <h3><b>Interpersonal Skills</b></h3>
-                  <h3 style="font-size: small; text-align: center;">
-                    Effective Communication | Stakeholder Management | Collaboration | Problem-solving |
-                    Design Thinking | Resilience
-                    <br><br>
-                    Time and Task Management | Presentation Skills
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ===================== TESTIMONIALS ===================== -->
-        <section class="site-section" data-section="testimonials">
-          <div class="colorlib-narrow-content">
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                <span class="heading-meta">TESTIMONIALS</span>
-                <h2 class="colorlib-heading animate-box" style="white-space: nowrap;">What’s it like to work with me?</h2>
-              </div>
-            </div>
-
-            <div class="row">
-
-
-			  <!-- Director's Appreciation -->
-			<div class="col-md-12">
-			<div class="block-47 d-flex mb-5">
-				<blockquote class="block-47-quote">
-
-				<div style="text-align: center;">
-					<img src="images/bilj.png"
-						alt="Appreciation from Director"
-						style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto 20px;">
-				</div>
-
-				<cite class="block-47-quote-author" style="display: block; text-align: center;">
-					&mdash; Biljana Jovanova,
-					<a href="#">Director of Data Science, H-E-B</a>
-				</cite>
-
-				</blockquote>
-			</div>
-			</div>
-
-
-
-              <!-- H-E-B Mentor -->
-              <div class="col-md-12">
-                <div class="block-47 d-flex mb-5">
-                  <blockquote class="block-47-quote">
-                    <p style="text-align: justify;">
-                      &ldquo;
-                      I had the pleasure of being Thanusri’s mentor for her 2026 Data Science internship at H-E-B.
-
-                      During her internship, Thanusri took ownership of her project in a manner exceeding that of most
-                      of her peers. In the initial weeks she engrossed herself in H-E-B’s culture and participated in
-                      deep research to understand the domain she was supporting.
-
-                      Once she established herself in the project background, she took the reins to be the development
-                      lead. One thing that impressed me was Thanusri’s ability to absorb information and feedback and
-                      incorporate that into her project while still maintaining a strict adherence to the deadlines.
-
-                      Beyond her technical adeptness, Thanusri invested time to meet with Partners across H-E-B
-                      (covering a vast array of domains) to establish personal connections and learn how her project
-                      fits into the larger picture. As a result of interest around her project, she was invited to an
-                      all-hands meeting by a sister team to present her work. Her final presentation to the entire H-E-B
-                      internship cohort (and their peers) was among the most comprehensive, clear, and exciting.
-
-                      Thanusri excels in the technical and soft skills that would make her a valuable asset to any
-                      team.&rdquo;
-                    </p>
-                    <cite class="block-47-quote-author">
-                      &mdash; Campbell Saint Vincent,
-                      <a href="#">Data Scientist II, H-E-B</a>
-                    </cite>
-                  </blockquote>
-                </div>
-              </div>
-
-              <!-- Texas A&M Lab -->
-              <div class="col-md-12">
-                <div class="block-47 d-flex mb-5">
-                  <blockquote class="block-47-quote">
-                    <p style="text-align: justify;">
-                      &ldquo;
-                      I had the opportunity to work with Thanusri in the same group at the Advanced Vision &amp;
-                      Learning Lab at Texas A&amp;M University. During that time, I found her to be punctual,
-                      hardworking, and respectful in the group environment. She showed a positive attitude toward her
-                      work and was willing to contribute to assigned tasks. Thanusri is also a kind and professional
-                      person to work with, and I believe these qualities will support her in future academic and
-                      professional opportunities.&rdquo;
-                    </p>
-                    <cite class="block-47-quote-author">
-                      &mdash; Fahimeh Orvati Nia,
-                      <a href="#">Doctor of Philosophy, Computer Engineering, Texas A&amp;M University</a>
-                    </cite>
-                  </blockquote>
-                </div>
-              </div>
-
-              <!-- Daimler Truck - Manager -->
-              <div class="col-md-12">
-                <div class="block-47 d-flex mb-5">
-                  <blockquote class="block-47-quote">
-                    <p style="text-align: justify;">
-                      &ldquo;Thanusri, Highly Aspiring, Commitment Oriented, Keep Improving Attitude &amp; Kindful.
-
-                      Displayed her patience and persistence in preparing the base table by constantly working with test
-                      engineers. Her efforts to understand more and improving the sanity level constantly is much
-                      appreciated.
-
-                      Although coming from non automotive background, she rapidly learnt the basics and correlated in
-                      the ML model. When questions arose, she didn’t just accept the status quo—she asked probing,
-                      thoughtful questions, seeking clarity from first principles. Inquiry to the core.
-
-                      Very sincere in completing the model well ahead of timeline.
-                      Throughout review cycles, she responded to feedback promptly and diligently, demonstrating a
-                      strong sense of ownership and commitment to quality.
-
-                      Her communication skills are excellent, explaining complex concepts in simple understandable
-                      manner.
-                      She is kind, grounded and approachable.
-
-                      Privilege working with Thanusri. I am confident she will continue to excel.&rdquo;
-                    </p>
-                    <cite class="block-47-quote-author">
-                      &mdash; Hari Krishnan,
-                      <a href="#">Manager, Daimler Truck</a>
-                    </cite>
-                  </blockquote>
-                </div>
-              </div>
-
-              <!-- Daimler Truck - Team Lead -->
-              <div class="col-md-12">
-                <div class="block-47 d-flex mb-5">
-                  <blockquote class="block-47-quote">
-                    <p style="text-align: justify;">
-                      &ldquo;
-                      Thanusri is an ardent learner, with a great attitude and wide perspective. During her internship
-                      at Daimler Truck, she not only exhibited her proficiency in her core domain, but also cross learnt
-                      vehicle systems and connected the dots efficiently. It was pleasure to work with her!&rdquo;
-                    </p>
-                    <cite class="block-47-quote-author">
-                      &mdash; Dhik Vijay,
-                      <a href="#">Team Lead, Daimler Truck</a>
-                    </cite>
-                  </blockquote>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        <!-- ===================== EXPERIENCE ===================== -->
-        <section class="colorlib-experience" data-section="experience">
-          <div class="colorlib-narrow-content">
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                <span class="heading-meta">Work Experience</span>
-                <h2 class="colorlib-heading animate-box" style="white-space: nowrap;">How have I made an impact?</h2>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="timeline-centered">
-
-                  <!-- AMETEK -->
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-1"
-                        style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                        <img src="images/AMETEK.png" alt="AMETEK logo" style="width: 100%; height: 100%; object-fit: cover;">
-                      </div>
-                      <div class="timeline-label">
-                        <h2>AMETEK - Amot Controls<br>
-                          <span style="font-size: small;">AI &amp; Analytics Associate <br>Aug 2026 - Present</span>
-                        </h2>
-                        <ul>
-                          <li style="text-align: justify;">Designed a RAG feature on Microsoft Copilot Studio within 4 weeks using product manuals, datasheets, and internal emails, enabling customer service representatives to quickly access support information, improving response consistency and reducing manual search effort.</li>
-                          <li style="text-align: justify;">Built an evaluation and observability layer combining LLM-as-a-Judge scoring, a golden dataset of 500+ QA pairs, human-in-the loop review, and LangSmith tracing across runs, achieving ~85% answer accuracy on queries and reducing debugging time.</li>
-                          <li style="text-align: justify;">Built an end-to-end intelligent document processing (IDP) and workflow automation pipeline in Power Automate, using Azure AI Content Understanding and Azure AI Document Intelligence to extract structured order data from customer purchase orders with varying layouts.</li>
-                          <li style="text-align: justify;">Integrated the pipeline with the IFS Cloud ERP REST API, adding validation checks on extracted order fields before automatically creating order confirmations, reducing manual data entry for the order processing team.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </article>
-
-                  <!-- H-E-B -->
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-1"
-                        style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                        <img src="images/download.png" alt="H-E-B logo" style="width: 100%; height: 100%; object-fit: cover;">
-                      </div>
-                      <div class="timeline-label">
-                        <h2>H-E-B<br>
-                          <span style="font-size: small;">Decision Science Analyst Intern <br>May 2026 - Aug 2026</span>
-                        </h2>
-                        <ul>
-                          <li style="text-align: justify;">Designed a Next-Basket Recommendation system using 11M+ grocery transactions across 15K+ products to predict which items each household will buy on their next shopping trip, improving on frequency-based recommendations by adding purchase timing.</li>
-                          <li style="text-align: justify;">Built an end-to-end recommendation pipeline that filtered each household’s purchase history to relevant products and engineered 55 temporal, behavioral, and basket-level features, such as days since last purchase, typical repurchase cycle, and overdue items.</li>
-                          <li style="text-align: justify;">Trained a LightGBM LambdaRank learning-to-rank model, tuned with Optuna hyperparameter optimization, to prioritize easily forgotten items, achieving 74% Recall@10 by capturing three-quarters of items customers actually purchased within the top 10 recommendations.</li>
-                          <li style="text-align: justify;">Presented the recommendation framework and key findings to Data Science leadership, demonstrating a scalable methodology to improve basket completeness, customer loyalty, and shopping experience.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </article>
-
-                  <!-- Texas A&M Lab -->
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-1"
-                        style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                        <img src="images/TAM-White-2.png" alt="Texas A&amp;M logo" style="width: 100%; height: 100%; object-fit: cover;">
-                      </div>
-                      <div class="timeline-label">
-                        <h2>Texas A&amp;M University, Advanced Vision and Learning Lab<br>
-                          <span style="font-size: small;">Graduate Student Technician <br>Jan 2026 - May 2026</span>
-                        </h2>
-                        <ul>
-                          <li style="text-align: justify;">Contributed to research at Texas A&M University’s Advanced Vision and Learning Lab (AVLL), working under Dr. Joshua Peeples on an automated plant phenotyping project to develop image-processing workflows that quantify plant growth and morphology from segmented images.</li>
-                          <li style="text-align: justify;">Supported researchers in computer vision based plant growth analysis, transforming segmented plant images into quantitative growth measurements using OpenCV, image processing, and skeletonization to analyze complex plant structures.</li>
-                          <li style="text-align: justify;">Extracted 5+ plant traits, including leaf area, width, path length, and structural measurements, and collaborated with AgriLife researchers to turn growth and morphology analyses into insights for experimental planning and research decisions.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </article>
-
-                  <!-- Daimler -->
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-1"
-                        style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                        <img src="images/download mercedes.jpeg" alt="Daimler Logo" style="width: 100%; height: 100%; object-fit: cover;">
-                      </div>
-                      <div class="timeline-label">
-                        <h2>Daimler India Commercial Vehicles (BharatBenz)<br>
-                          <span style="font-size: small;">Data Science Intern <br>Jan 2025 - Jun 2025</span>
-                        </h2>
-                        <ul>
-                          <li style="text-align: justify;">Collaborated with the Data-Driven Engineering team to develop machine learning solutions into vehicle testing pipelines, streamlining 6 dynamic brake testing workflows across 44 truck variants.</li>
-                          <li style="text-align: justify;">Developed a statistical twin for Dynamic Brake Testing, predicting braking deceleration (MFDD) with Random Forest Regressor (R² 0.94) and stopping distance with XGBoost Regressor (R² 0.937), tuned using GridSearchCV.</li>
-                          <li style="text-align: justify;">Built and delivered a Streamlit application for the Functional Brake Testing team that predicts whether a vehicle will pass or fail regulatory brake tests, enabling pre-screening before physical testing and reducing testing time by 80%.</li>
-                          <li style="text-align: justify;">Built ETL pipelines in Azure Databricks using PySpark and SQL to extract telematics and Dealer Management System data from Azure cloud storage, transform it for analysis, and built Power BI dashboards for vehicle monitoring, driving pattern analysis, and fleet optimization.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </article>
-
-                  <!-- Shrimitha Energy -->
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-1"
-                        style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                        <img src="images/shri logo.png" alt="Shrimitha logo" style="width: 100%; height: 100%; object-fit: cover;">
-                      </div>
-                      <div class="timeline-label">
-                        <h2>Shrimitha Energy Solutions Pvt Limited<br>
-                          <span style="font-size: small;">Data Science Intern <br>Sept 2024 - Nov 2024</span>
-                        </h2>
-                        <ul>
-                          <li style="text-align: justify;">Formulated hybrid deep learning models CNN-LSTM-XGBoost to predict lithium-ion battery Remaining Useful Life and State of Charge, achieving an R² of 0.97 and enabling high-accuracy predictive maintenance.</li>
-                          <li style="text-align: justify;">Processed degradation feature-extraction for performance data from 38+ lithium-ion batteries, supporting early fault detection and reducing fault-identification time for maintenance scheduling.</li>
-                          <li style="text-align: justify;">Established end-to-end battery health monitoring pipelines integrating predictive RUL models with operational systems, reducing unplanned equipment downtime and improving maintenance planning accuracy.</li>
-                          <li style="text-align: justify;">Produced interactive Power BI dashboards visualizing real-time battery degradation trends, capacity fade curves, and health KPIs, enabling data-driven maintenance decisions for field operations.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </article>
-
-                  <!-- DRDO -->
-                  <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-1"
-                        style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                        <img src="images/drdologo1.png" alt="DRDO Logo" style="width: 100%; height: 100%; object-fit: cover;">
-                      </div>
-                      <div class="timeline-label">
-                        <h2>Defense Research Development Organisation<br>
-                          <span style="font-size: small;">Data Science Intern <br>Jul 2023 - Aug 2023</span>
-                        </h2>
-                        <ul>
-                          <li style="text-align: justify;">Conducted in-depth literature survey and technical analysis on Hybrid Electric Vehicle Technologies to identify innovation trends and performance metrics.</li>
-                          <li style="text-align: justify;">Applied data collection, preprocessing, and analytical techniques to synthesize insights from diverse engineering and research sources.</li>
-                          <li style="text-align: justify;">Collaborated with a multidisciplinary team under Defence Research &amp; Development Organisation (DRDO) to align research outcomes with industry and government objectives.</li>
-                          <li style="text-align: justify;">Presented the literature survey to Scientist 'F' - Selvathaai at the Combat Vehicles Research and Development Establishment (CVRDE) on the Hybrid Electric Vehicle Technologies.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </article>
-
-                  <!-- Timeline end marker -->
-                  <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
-                    <div class="timeline-entry-inner">
-                      <div class="timeline-icon color-none"></div>
-                    </div>
-                  </article>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ===================== EDUCATION ===================== -->
-        <section class="colorlib-education" data-section="education">
-          <div class="colorlib-narrow-content">
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                <span class="heading-meta">Education</span>
-                <h2 class="colorlib-heading animate-box" style="white-space: nowrap;">where am i building my foundation?</h2>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-                <div class="fancy-collapse-panel">
-                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-                    <!-- Master's -->
-                    <div class="panel panel-default">
-                      <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
-                            aria-controls="collapseOne" style="background: transparent; color: black;">
-                            Master of Science in Data Science (Aug 2025 - May 2027)
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                          <div class="row">
-                            <div class="col-md-12">
-                              <p style="text-align: justify; font-size: small; background: transparent; color: black;">
-                                I am currently pursuing <strong>a Master of Science in Data Science (MSDS) at Texas A&amp;M
-                                  University, College Station, Texas, USA.</strong> My graduate studies have strengthened my
-                                foundation in machine learning, artificial intelligence, statistical modeling, and
-                                large-scale data analytics while providing opportunities to apply these concepts to
-                                real-world business problems.
-                                <br>
-                                <strong>Courses:</strong> Mathematical Foundations for Data Science, Statistical Foundations
-                                for Data Science, Data Mining and Analysis, Databases and Computational Tools Used in Big
-                                Data, Applied Analytics, Parallel Computing, Machine Learning Engineering
-                              </p>
-                              <ul style="text-align: justify; font-size: small;">
-                                <li><b>GPA : </b>3.85/4</li>
-                                <li>I worked as a Graduate Student Technician in the Advanced Vision and Learning Lab, contributing to a research project on Multimodal, Multitask Data Analysis for Automated Plant Phenotyping</li>
-                                <li>I worked as a Decision Science Analyst at H-E-B this summer within the Data Science Center of Excellence (DSCOE) on an end-to-end Next-Basket Recommendation System to predict customer's next purchases.</li>
-                                <li>I am currently working as a AI &amp; Analytics Associate at AMETEK - Amot Controls for this fall where I am working on AI-driven workflow automation and data analytics initiatives, collaborating with teams to build data and AI solutions.</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Bachelor's -->
-                    <div class="panel panel-default">
-                      <div class="panel-heading" role="tab" id="headingFive">
-                        <h4 class="panel-title">
-                          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive"
-                            aria-expanded="false" aria-controls="collapseFive">
-                            Bachelors in Electrical and Electronics Engineering (Aug 2021 - May 2025)
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-                        <div class="panel-body">
-                          <p style="text-align: justify; font-size: small;">
-                            I have completed my <strong>Bachelor of Engineering in Electrical and Electronics Engineering
-                              from Sri Sivasubramaniya Nadar College Engineering, Chennai, India.</strong> During my
-                            undergrad, I participated in cultural fests, hackathons, and clubs to explore my interests. I
-                            also worked on multiple projects and undertook internships to widen my technical skillset.
-                            Undergrad was a challenging yet exciting phase of my life and taught me to be independent and
-                            self-sufficient!
-                            <br>
-                            <strong>Courses: </strong>Data Structures, Probability and Statistics, Introduction to Data
-                            Science, Machine Learning, Artificial Intelligence
-                          </p>
-                          <ul style="text-align: justify; font-size: small;">
-                            <li><b>GPA : </b>8.72/10</li>
-                            <li>Actively contributed to the DATABUZZ community by engaging in advanced workshops and collaborations, expanding expertise in data analytics and project management.</li>
-                            <li>Coordinated alumni engagement for a 600+ attendee tribute event, strengthening the SSN network and elevating event execution standards through strategic planning and relationship-building.</li>
-                            <li>I volunteered and managed technical events at INVENTE a technical fest of SSN.</li>
-                            <li>I was a part of the Build Club of India, SSN. Engineered innovative turns ideas into real-world prototypes through hands-on hardware and IoT projects.</li>
-                            <li>I Secured first position in the regional-level singing competition and represented at the national-level.</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- UT Austin -->
-                    <div class="panel panel-default">
-                      <div class="panel-heading" role="tab" id="headingUTAustin">
-                        <h4 class="panel-title">
-                          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseUTAustin"
-                            aria-expanded="false" aria-controls="collapseUTAustin">
-                            Post Graduate Program in Data Science &amp; Business Analytics – Professional Certification (Aug 2023 - Aug 2024)
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="collapseUTAustin" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingUTAustin">
-                        <div class="panel-body">
-                          <p style="text-align: justify; font-size: small;">
-                            I have completed the <strong>PG Program in Data Science and Business Analytics</strong> from the
-                            <strong>University of Texas at Austin</strong>.
-                            The program focused on advanced data analytics, business strategy, and hands-on projects using
-                            industry datasets.
-                            <br>
-                            <strong>Courses:</strong> SQL, Predictive Modeling, Data Visualization, Time Series Forecasting,
-                            Marketing and Retail Analytics, Financial and Risk Analytics.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div><!-- end:panel-group -->
-                </div><!-- end:fancy-collapse-panel -->
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ===================== CERTIFICATIONS ===================== -->
-        <section class="colorlib-certifications" data-section="certifications">
-          <div class="colorlib-narrow-content">
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                <span class="heading-meta">Certifications</span>
-                <h2 class="colorlib-heading animate-box" style="white-space: nowrap;">Achievements &amp; Certifications</h2>
-              </div>
-            </div>
-
-            <!-- Certificates -->
-            <div style="text-align: center;">
-              <div id="certSlide"
-                style="width: 600px; height: 400px; margin: auto; background-size: contain; background-repeat: no-repeat; background-position: center; border: 1px solid black; border-radius: 8px;">
-              </div>
-              <br>
-              <button onclick="nextCert()" style="font-size: 14px; padding: 5px 10px;">Next ➡</button>
-            </div>
-
-            <script>
-              var certs = [
-                'images/THANUSRI.jpg',
-                'images/THANUSRI2.jpg',
-                'images/4247893-AI_-_The_Ultimate_Program_for_Data_Engineers-Thanusri_Aenugula_page-0001.jpg',
-                'images/4252696-AI_-_The_Ultimate_Program_for_Data_Engineers-Thanusri_Aenugula_page-0001.jpg',
-                'images/linkedin_image.jpg'
-              ];
-              var index = 0;
-              var certDiv = document.getElementById('certSlide');
-
-              function showCert(i) {
-                certDiv.style.backgroundImage = 'url(' + certs[i] + ')';
-              }
-
-              function nextCert() {
-                index = (index + 1) % certs.length;
-                showCert(index);
-              }
-
-              // Show first certificate initially
-              showCert(index);
-            </script>
-          </div>
-        </section>
-
-		<!-- ===================== OUTSIDE WORK ===================== -->
-		<section class="colorlib-work" data-section="socialwork">
-		<div class="colorlib-narrow-content">
-			<div class="row">
-			<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-				<span class="heading-meta">Passion beyond the desk</span>
-				<h2 class="colorlib-heading animate-box">What Keeps Me Energized?</h2>
-			</div>
-			</div>
-
-			<div class="row">
-			<div class="col-md-12">
-				<div class="project"
-				style="background-image: url(images/photo-collage.png.png);
-						background-size: contain;
-						background-position: center;
-						background-repeat: no-repeat;
-						height: 700px;">
-				</div>
-			</div>
-			</div>
-		</div>
-		</section>
-
-        <!-- ===================== CONTACT ===================== -->
-        <section class="colorlib-contact" data-section="contact">
-          <div class="colorlib-narrow-content">
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                <span class="heading-meta">Get in Touch</span>
-                <h2 class="colorlib-heading" style="white-space: nowrap;">Let’s start a conversation!!</h2>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-5">
-                <div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-                  <div class="colorlib-icon">
-                    <i class="icon-globe-outline"></i>
-                  </div>
-                  <div class="colorlib-text">
-                    <p><a href="#">thanusri1601@gmail.com</a></p>
-                  </div>
-                </div>
-
-                <div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-                  <div class="colorlib-icon">
-                    <i class="icon-map"></i>
-                  </div>
-                  <div class="colorlib-text">
-                    <p>College Station, TX</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-7 col-md-push-1">
-                <div class="row">
-                  <div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
-                    <form action="mailto:thanusri1601@gmail.com" method="post" enctype="text/plain">
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Email">
-                      </div>
-                      <div class="form-group">
-                        <textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-                      </div>
-                      <div class="form-group">
-                        <input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </div><!-- end:colorlib-main -->
-    </div><!-- end:container-wrap -->
-  </div><!-- end:colorlib-page -->
-
-  <!-- jQuery -->
-  <script src="js/jquery.min.js"></script>
-  <!-- jQuery Easing -->
-  <script src="js/jquery.easing.1.3.js"></script>
-  <!-- Bootstrap -->
-  <script src="js/bootstrap.min.js"></script>
-  <!-- Waypoints -->
-  <script src="js/jquery.waypoints.min.js"></script>
-  <!-- Flexslider -->
-  <script src="js/jquery.flexslider-min.js"></script>
-  <!-- Owl carousel -->
-  <script src="js/owl.carousel.min.js"></script>
-  <!-- Counters -->
-  <script src="js/jquery.countTo.js"></script>
-
-  <!-- MAIN JS -->
-  <script src="js/main.js"></script>
+  <script src="js/portfolio.js"></script>
 </body>
 
 </html>
